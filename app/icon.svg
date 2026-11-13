@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-labelledby="title">
+  <title id="title">Минималистичное алоэ вера</title>
+  <!-- Four softly rounded translucent aloe leaves, without strokes -->
+  <path d="M64 113 C46 100 25 77 19 59 C15 47 15 39 20 36 C28 31 41 43 50 55 C62 72 67 93 64 113 Z" fill="#81CB6C" fill-opacity="0.72"/>
+  <path d="M64 113 C82 99 103 78 110 58 C114 47 113 40 108 37 C100 33 87 44 78 56 C67 72 61 93 64 113 Z" fill="#75BF5D" fill-opacity="0.68"/>
+  <path d="M64 112 C53 87 46 58 47 39 C48 25 53 17 59 18 C66 19 73 36 76 55 C79 77 72 100 64 112 Z" fill="#9CDC82" fill-opacity="0.78"/>
+  <path d="M65 114 C59 93 65 65 77 49 C86 38 95 34 100 38 C106 43 99 56 91 69 C80 87 70 105 65 114 Z" fill="#58B94F" fill-opacity="0.66"/>
+</svg>

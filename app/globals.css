@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: #F8F7F3;
+  --color-forest: #263923;
+  --color-ink: #273024;
+  --color-olive: #6A9156;
+  --color-sage: #C4DCB5;
+  --color-pale: #E7EFDF;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+:root { color-scheme: light; }
 
+html { scroll-behavior: smooth; }
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-width: 320px;
+  background: #F8F7F3;
+  color: #273024;
+  font-family: "Manrope", "Inter", "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+* { box-sizing: border-box; }
+section[id], div[id="education"] { scroll-margin-top: 90px; }
+::selection { background: #C4DCB5; color: #263923; }
+
+.site-container { width: min(100% - 48px, 1240px); margin-inline: auto; }
+.section-shell { isolation: isolate; }
+.section-kicker { color: #526E48; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.section-title { font-size: clamp(2.1rem, 3.8vw, 3.8rem); line-height: 1.12; font-weight: 800; letter-spacing: -.035em; text-transform: uppercase; color: #263923; }
+.section-title span { color: #6A9156; }
+
+.skip-link { position: fixed; z-index: 100; top: -100px; left: 12px; background: #263923; color: #fff; padding: 12px 18px; border-radius: 12px; }
+.skip-link:focus { top: 12px; }
+
+/* Декоративные органические фигуры из Figma в адаптивной CSS-форме. */
+.decorations { position: absolute; z-index: -1; inset: 0; overflow: hidden; pointer-events: none; }
+.decor-blob { position: absolute; display: block; background: #DAE8D0; opacity: .68; }
+.decor-curve { position: absolute; width: 310px; height: 620px; opacity: .65; }
+
+.decorations--hero .decor-blob--a { left: -170px; top: 110px; width: 600px; height: 640px; border-radius: 44% 56% 42% 58% / 47% 43% 57% 53%; transform: rotate(-22deg); }
+.decorations--hero .decor-blob--b { right: -240px; top: -100px; width: 480px; height: 460px; border-radius: 54% 46% 42% 58% / 38% 56% 44% 62%; transform: rotate(20deg); }
+.decorations--hero .decor-curve { right: -65px; top: 0; transform: rotate(-3deg); }
+
+.decorations--about .decor-blob--a { right: -170px; bottom: -120px; width: 720px; height: 700px; border-radius: 53% 47% 45% 55% / 61% 42% 58% 39%; transform: rotate(14deg); }
+.decorations--about .decor-blob--b { left: -180px; bottom: -280px; width: 360px; height: 550px; border-radius: 45% 55% 49% 51%; opacity: .4; }
+.decorations--about .decor-curve { right: -120px; top: 80px; }
+
+.decorations--format .decor-blob--a { right: -240px; top: 420px; width: 570px; height: 1050px; border-radius: 50% 50% 38% 62%; opacity: .65; transform: rotate(-13deg); }
+.decorations--format .decor-blob--b { left: -230px; bottom: -90px; width: 490px; height: 740px; border-radius: 50% 50% 40% 60%; opacity: .55; }
+.decorations--format .decor-curve { display: none; }
+
+.decorations--pricing .decor-blob--a { right: -120px; bottom: -260px; width: 630px; height: 850px; border-radius: 50% 50% 44% 56%; opacity: .65; transform: rotate(-15deg); }
+.decorations--pricing .decor-blob--b { left: -240px; top: -80px; width: 500px; height: 680px; border-radius: 52% 48% 46% 54%; opacity: .55; }
+.decorations--pricing .decor-curve { display: none; }
+
+@media (max-width: 1023px) {
+  .hero-section { min-height: 0; }
+  .decorations--hero .decor-blob--a { top: 190px; left: -200px; width: 500px; height: 500px; }
+}
+@media (max-width: 639px) {
+  .site-container { width: min(100% - 36px, 1240px); }
+  .section-title { font-size: clamp(2rem, 9vw, 2.5rem); }
+  .decorations--hero .decor-blob--b { right: -260px; }
+  .decor-curve { opacity: .3; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0s !important; animation-duration: .01ms !important; } }
