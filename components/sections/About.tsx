@@ -1,17 +1,46 @@
 import Image from 'next/image';
-import Decorations from '@/components/ui/Decorations';
 import { principles, copy } from '@/data/site';
 
 export default function About() {
   return (
-    <section id="about" aria-labelledby="about-title" className="section-shell relative isolate overflow-hidden bg-cream">
-      <Decorations variant="about" />
-      <div className="site-container relative z-10 grid gap-8 py-16 md:py-24 lg:min-h-[810px] lg:grid-cols-[60%_40%] lg:gap-1 lg:py-24">
+    <section id="top" aria-labelledby="about-title" className="section-shell relative isolate overflow-hidden bg-cream">
+      <div className="site-container relative z-10 grid items-start
+      gap-y-6 pt-7 pb-10
+      md:pt-14 md:pb-12
+      lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)]
+      lg:gap-x-6 lg:gap-y-6
+      lg:pt-10 lg:pb-14">
+
+        <div className="text-center lg:col-span-2">
+          <h1
+            id="about-title"
+            className="mx-auto max-w-[1000px]
+        text-[clamp(2rem,3.5vw,3.5rem)]
+        leading-[1.1] font-extrabold
+        tracking-[-0.035em] uppercase text-forest"
+          >
+            Меня зовут{" "}
+            <span className="text-olive">Роханская Евгения</span>
+
+          </h1>
+        </div>
+
         <div className="min-w-0 lg:pr-10">
-          <h2 id="about-title" className="mt-5 text-[clamp(2.1rem,3.2vw,3.65rem)] leading-[1.12] font-extrabold tracking-[-0.03em] uppercase text-forest">
-            {copy.about.headingOne}
-            <span className="block">{copy.about.headingTwo} <span className="text-olive">{copy.about.headingAccent}</span></span>
-          </h2>
+
+          <div className="max-w-[760px]">
+
+            {/* Подзаголовок с профессией */}
+            <p
+              className="mt-3 max-w-[690px] text-[clamp(1.35rem,2.2vw,2.15rem)] leading-[1.25] font-bold tracking-[-0.025em] text-forest"
+            >
+              Я — дипломированный {' '}
+
+              <span className="text-olive">нутрициолог-консультант</span>
+
+              {' '} по питанию и образу жизни.
+            </p>
+
+          </div>
           <p className="mt-6 max-w-[690px] text-lg leading-relaxed text-forest/90">
             {copy.about.lead}
           </p>
@@ -19,7 +48,7 @@ export default function About() {
             {copy.about.quote}
           </blockquote>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-3">
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {principles.map((item) => (
               <div key={item.title} className="flex min-h-[92px] items-center gap-3 rounded-[26px] bg-pale/85 px-4 py-4">
                 <Image src={item.icon} alt="" width={42} height={42} className="size-9 shrink-0 object-contain" />
@@ -39,7 +68,7 @@ export default function About() {
                     Подробнее об образовании →
                   </summary>
                   <p className="mt-3 text-sm leading-relaxed text-forest/75">
-                    {copy.about.qualificationDetails}
+                    чето будет
                   </p>
                 </details>
               </div>
@@ -47,17 +76,31 @@ export default function About() {
           </div>
         </div>
 
-        <div className="relative mx-auto min-h-[410px] w-full max-w-[520px] self-end sm:min-h-[540px] lg:min-h-[650px]">
-          <div aria-hidden="true" className="absolute inset-x-5 bottom-0 top-8 rounded-t-[48%] bg-pale/95" />
-          <div aria-hidden="true" className="absolute inset-x-[-12px] bottom-0 top-[24%] rounded-t-[45%] bg-sage/25" />
-          <Image
-            src="/images/roh-ev-portret.png"
-            alt="Портрет Евгении Роханской"
-            width={1152}
-            height={1366}
-            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 60vw, 38vw"
-            className="absolute bottom-[-16px] left-1/2 h-auto w-[min(110%,570px)] max-w-none -translate-x-1/2 object-contain object-bottom"
-          />
+        <div className="relative isolate mx-auto min-h-[410px] w-full max-w-[520px] self-end sm:min-h-[540px] lg:min-h-[650px]">
+
+          <div className="relative isolate mx-auto flex w-full max-w-[520px] items-end self-end lg:min-h-[650px]">
+
+            {/* Контейнер фотографии и blobs */}
+            <div className="relative w-full">
+
+              {/* Декоративные blobs */}
+              <div className="portrait-blobs" aria-hidden="true">
+                <div className="portrait-blob portrait-blob--one" />
+                <div className="portrait-blob portrait-blob--two" />
+              </div>
+
+              {/* Фотография Евгении */}
+              <Image
+                src="/images/roh-ev-portret.png"
+                alt="Портрет Евгении Роханской"
+                width={1152}
+                height={1366}
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 60vw, 38vw"
+                className="relative z-10 block h-auto w-full object-contain object-bottom"
+              />
+
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -6,7 +6,7 @@ import BookingLink from '@/components/ui/BookingLink';
 import { site } from '@/data/site';
 
 const links = [
-  { href: '#about', label: 'Обо мне' },
+  { href: '#zaprosi', label: 'Запросы' },
   { href: '#format', label: 'Формат' },
   { href: '#pricing', label: 'Тарифы' },
 ];
@@ -17,16 +17,17 @@ export default function Header() {
   return (
     <header className="site-header sticky top-0 z-50 border-b border-[#E9E9E2]/80 bg-cream/95 backdrop-blur-md">
       <div className="site-container flex min-h-[76px] items-center justify-between gap-4 py-3">
-        <a href="#top" className="inline-flex min-w-0 items-center gap-3" aria-label="На главную">
+        <a href="#top" onClick={() => setMenuOpen(false)} className="inline-flex min-w-0 items-center gap-3" aria-label="На главную">
           <Image src="/icons/logo-aloe.svg" alt="" width={34} height={34} className="shrink-0" />
-          <span className="rounded-full border border-olive/50 px-4 py-2 text-[13px] font-medium leading-tight whitespace-nowrap text-forest sm:text-sm">
+          <span className="rounded-full border border-olive/50 px-4 py-2 text-[13px] font-medium leading-tight whitespace-nowrap text-forest sm:text-sm
+          transition-colors hover:text-olive">
             {site.brand}
           </span>
         </a>
 
         <nav aria-label="Основная навигация" className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="text-sm text-ink transition-colors hover:text-olive focus-visible:underline">
+            <a key={link.href} href={link.href} className="text-sm text-ink transition-colors hover:text-olive focus-visible:underline ">
               {link.label}
             </a>
           ))}
@@ -38,7 +39,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="inline-flex size-11 items-center justify-center rounded-full border border-olive/40 text-forest md:hidden"
+          className="inline-flex size-11 items-center justify-center rounded-full border border-olive/40 text-forest md:hidden transition-colors hover:text-olive cursor-pointer"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
           aria-label={menuOpen ? 'Закрыть меню' : 'Открыть меню'}
@@ -51,18 +52,46 @@ export default function Header() {
           )}
         </button>
       </div>
-      {menuOpen && (
-        <nav id="mobile-menu" aria-label="Мобильная навигация" className="border-t border-olive/15 bg-cream px-6 pb-6 pt-3 md:hidden">
-          <div className="mx-auto flex max-w-xl flex-col gap-1">
-            {links.map((link) => (
-              <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)} className="rounded-xl px-3 py-3 text-base text-forest hover:bg-pale">
-                {link.label}
-              </a>
-            ))}
-            <BookingLink className="mt-3">Записаться на консультацию</BookingLink>
-          </div>
-        </nav>
-      )}
+
+      <div
+        inert={!menuOpen}
+        className={`grid transition-[grid-template-rows,opacity]
+    duration-450 ease-in-out motion-reduce:transition-none
+    md:hidden
+    ${menuOpen
+            ? "grid-rows-[1fr] opacity-100"
+            : "grid-rows-[0fr] opacity-0"
+          }`}
+      >
+        <div className="min-h-0 overflow-hidden">
+          <nav
+            id="mobile-menu"
+            aria-label="Мобильная навигация"
+            className="border-t border-olive/15 bg-cream px-6 pb-6 pt-3"
+          >
+            <div className="mx-auto flex max-w-xl flex-col gap-1">
+              {links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-xl px-3 py-3 text-base
+              text-forest hover:bg-pale "
+                >
+                  {link.label}
+                </a>
+              ))}
+
+              <BookingLink
+                className="mt-3"
+                onClick={() => setMenuOpen(false)}
+              >
+                Записаться на консультацию
+              </BookingLink>
+            </div>
+          </nav>
+        </div>
+      </div>
     </header>
   );
 }

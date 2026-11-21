@@ -5,7 +5,7 @@ import { focusAreas, steps, copy } from '@/data/site';
 
 export default function Work() {
   return (
-    <section id="format" aria-labelledby="work-title" className="section-shell relative isolate overflow-hidden bg-cream py-18 md:py-24">
+    <section id="format" aria-labelledby="work-title" className="section-shell relative isolate overflow-hidden bg-cream pt-0 pb-12 md:pt-0 md:pb-14 lg:pt-0 lg:pb-16">
       <Decorations variant="format" />
       <div className="site-container relative z-10">
         <div className="mb-10 text-center md:mb-12">

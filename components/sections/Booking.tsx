@@ -3,7 +3,7 @@ import { site, copy } from '@/data/site';
 
 export default function Booking() {
   return (
-    <section id="booking" aria-labelledby="booking-title" className="scroll-mt-[100px] bg-[#EAF0E3] py-18 md:py-24">
+    <section id="booking" aria-labelledby="booking-title" className="scroll-mt-[100px] bg-[#E5EDDC] pt-0 pb-18 md:pt-14 md:pb-14 lg:pt-20 lg:pb-16">
       <div className="site-container mx-auto flex max-w-[850px] flex-col items-center text-center">
         <p className="section-kicker">{copy.booking.eyebrow}</p>
         <h2 id="booking-title" className="section-title mt-4">{copy.booking.heading} <span>{copy.booking.headingAccent}</span></h2>
@@ -21,7 +21,6 @@ export default function Booking() {
             Для запуска онлайн-записи нужно указать ссылку на сервис бронирования или контактный email в <code className="font-bold">data/site.ts</code>. Пока это демонстрационная версия сайта.
           </p>
         )}
-        <p className="mt-4 text-sm text-forest/65">Онлайн · {site.consultationDuration}</p>
       </div>
     </section>
   );

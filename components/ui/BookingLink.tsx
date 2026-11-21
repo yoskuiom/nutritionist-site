@@ -5,12 +5,14 @@ type Props = {
   children?: ReactNode;
   className?: string;
   variant?: 'primary' | 'soft' | 'outline';
+  onClick?: () => void;
 };
 
 export default function BookingLink({
   children = 'Записаться',
   className = '',
   variant = 'primary',
+  onClick,
 }: Props) {
   const href = site.bookingUrl || '#booking';
   const external = /^https?:\/\//.test(href);
@@ -23,9 +25,17 @@ export default function BookingLink({
   return (
     <a
       href={href}
+      onClick={onClick}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
-      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest ${styles} ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest 
+      active:bg-[#FDFCF8]
+      active:text-forest
+      transition-colors
+      duration-300  
+      hover:bg-[#FDFCF8]
+      hover:text-forest
+      ${styles} ${className}`}
     >
       <span>{children}</span>
       <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

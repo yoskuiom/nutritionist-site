@@ -22,23 +22,21 @@ export const site = {
   brand: 'Евгения Роханская',
   profession: 'Нутрициолог',
   consultationDuration: '60 минут',
-  /** Вставьте ссылку на вашу систему записи, например https://cal.com/ваше-имя */
-  bookingUrl: '',
-  /** Добавьте реальный адрес — до этого не показываем неработающую ссылку. */
+  bookingUrl: 'https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F79243684628%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafhJQhDxWBFkIXyP_LwcQE40LNegeO_0PnQAZM9BrFP-Focx6mcrk3sRBZkgA_aem_yPR-b2y-EssTO2K1NIJVsA&e=AUAJNv-aVHZAJMIwQ0v7FFLe481mKmnaUCCVomCQjXZoiyUks0h93vs8Q-uQKv_p8cMZxaNwSXe3cRbhNNb6nZgceXoQ1CSxS5lr56MzuFWXij_xXmxWKynkjXnrWe3uiz12HAU',
   email: '',
-  /** Ссылка на профиль специалиста (необязательно). */
-  socialUrl: '',
+  socialUrl: 'https://www.instagram.com/rohanskaya.ev/',
 } as const;
 
 /** Заголовки и основные тексты тоже вынесены сюда: позже их сможет менять клиентка через CMS. */
 export const copy = {
 
   about: {
-    headingOne: 'Меня зовут Евгения,',
+    headingOne: 'Меня зовут Роханская Евгения,',
     headingTwo: 'я —',
-    headingAccent: 'нутрициолог',
-    lead: 'Моя специализация — комплексный подход к питанию, образу жизни и поддержке пищеварения.',
-    quote: 'Я убеждена, что работа со здоровьем не должна сводиться к одному продукту, одной добавке или универсальной диете. Важно увидеть всю картину: питание, образ жизни, привычки, жалобы и имеющиеся результаты обследований.',
+    headingAccent: 'дипломированный нутрициолог-консультант',
+    headingThree: 'по питанию и образу жизни',
+    lead: 'Системная работа над здоровьем с персональной стратегией и поддержкой во внедрении рекомендаций.',
+    quote: 'Помогаю разобраться в вашей ситуации, определить приоритеты и выстроить понятный план действий. Не готовые универсальные схемы, а работа с вашей ситуацией задачи.',
     qualificationTitle: 'Образование и квалификация',
     qualificationSummary: 'Сертификаты, дополнительное обучение и профессиональная подготовка.',
     qualificationDetails: 'Перечень конкретных программ и дипломов необходимо добавить после проверки документов специалиста.',
@@ -46,20 +44,20 @@ export const copy = {
 
   hero: {
     eyebrow: 'Нутрициолог · онлайн',
-    lineOne: 'Вам нужна',
-    lineTwo: 'консультация,',
-    lineThree: 'если у вас:',
+    lineOne: 'С какими',
+    lineTwo: 'Запросами',
+    lineThree: 'я работаю:',
   },
 
   work: {
-    eyebrow: 'Формат работы',
+    eyebrow: 'Пошаговый план',
     heading: 'Как проходит',
     headingAccent: 'работа',
     lead: 'От знакомства и разбора запроса до персональных рекомендаций и сопровождения.',
     areasEyebrow: 'Направления',
     areasHeadingAccent: 'С чем',
     areasHeading: 'я работаю',
-    ctaLead: 'Сделайте первый шаг к более понятному питанию',
+    ctaLead: 'Готовы начать разбираться в своем здоровье и привычках?',
   },
   pricing: {
     eyebrow: 'Услуги и стоимость',
@@ -88,8 +86,9 @@ export const symptoms: Symptom[] = [
 
 export const principles: Principle[] = [
   { title: 'Индивидуальный подход', icon: '/icons/leaf.svg' },
-  { title: 'Без строгих диет', icon: '/icons/scales.svg' },
-  { title: 'С учётом вашего образа жизни', icon: '/icons/heart.svg' },
+  { title: 'поддержка', icon: '/icons/support.svg' },
+  { title: 'системность', icon: '/icons/system.svg' },
+  { title: 'выбор формата', icon: '/icons/format.svg' },
 ];
 
 export const steps: Step[] = [
@@ -134,7 +133,7 @@ export const focusAreas: FocusArea[] = [
   {
     title: 'Образ жизни',
     description: 'Работаем с режимом сна, физической активностью и привычками, влияющими на самочувствие.',
-    icon: '/icons/heart-leaf.svg',
+    icon: '/icons/heart.svg',
   },
   {
     title: 'Нутрицевтическая поддержка',
@@ -147,6 +146,7 @@ export const tariffs: Tariff[] = [
   {
     id: 'consultation',
     name: 'Разовая консультация',
+    duration: '60 минут',
     description: 'Если вы хотите начать с одной встречи и получить профессиональный взгляд на вашу ситуацию.',
     features: [
       'Разбираем ваш запрос',

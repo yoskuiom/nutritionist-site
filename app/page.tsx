@@ -1,5 +1,5 @@
 import Header from '@/components/layout/Header';
-import Hero from '@/components/sections/Hero';
+import Hero from '@/components/sections/zaprosi';
 import About from '@/components/sections/About';
 import Work from '@/components/sections/Work';
 import Pricing from '@/components/sections/Pricing';

@@ -4,7 +4,7 @@ import { tariffs, formatRubles, copy } from '@/data/site';
 
 export default function Pricing() {
   return (
-    <section id="pricing" aria-labelledby="pricing-title" className="section-shell relative isolate overflow-hidden bg-cream py-18 md:py-24">
+    <section id="pricing" aria-labelledby="pricing-title" className="section-shell relative isolate overflow-hidden bg-cream pt-0 pb-12 md:pt-0 md:pb-14 lg:pt-0 lg:pb-16">
       <Decorations variant="pricing" />
       <div className="site-container relative z-10">
         <div className="mb-10 text-center">
@@ -18,7 +18,7 @@ export default function Pricing() {
         <div className="grid gap-5 lg:grid-cols-3 lg:items-stretch">
           {tariffs.map((tariff) => (
             <article key={tariff.id} className={`flex flex-col rounded-[34px] border p-6 sm:p-8 ${tariff.featured ? 'border-olive/60 bg-pale/75 shadow-[0_14px_38px_rgba(33,57,33,0.07)]' : 'border-olive/35 bg-cream/90'}`}>
-              {tariff.featured && <p className="mb-4 w-fit rounded-full bg-sage px-3 py-1 text-xs font-bold text-forest">Популярный формат</p>}
+              {/* {tariff.featured && <p className="mb-4 w-fit rounded-full bg-sage px-3 py-1 text-xs font-bold text-forest">Популярный формат</p>} */}
               <h3 className="min-h-[58px] text-2xl leading-tight font-extrabold text-olive">{tariff.name}</h3>
               {tariff.duration && <p className="mt-2 text-lg font-bold text-forest">{tariff.duration}</p>}
               <p className="mt-5 text-sm leading-relaxed text-forest/80 sm:text-base">{tariff.description}</p>
@@ -32,10 +32,6 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="mt-auto pt-8">
-                <p className="mb-5 text-center text-[30px] font-extrabold text-forest">{formatRubles(tariff.priceRub)}</p>
-                <BookingLink variant={tariff.featured ? 'primary' : 'soft'} className="w-full">{tariff.cta}</BookingLink>
               </div>
             </article>
           ))}

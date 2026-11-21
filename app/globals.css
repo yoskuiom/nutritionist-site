@@ -9,9 +9,14 @@
   --color-pale: #E7EFDF;
 }
 
-:root { color-scheme: light; }
+:root {
+  color-scheme: light;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -21,48 +26,352 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-* { box-sizing: border-box; }
-section[id], div[id="education"] { scroll-margin-top: 90px; }
-::selection { background: #C4DCB5; color: #263923; }
+* {
+  box-sizing: border-box;
+}
 
-.site-container { width: min(100% - 48px, 1240px); margin-inline: auto; }
-.section-shell { isolation: isolate; }
-.section-kicker { color: #526E48; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-.section-title { font-size: clamp(2.1rem, 3.8vw, 3.8rem); line-height: 1.12; font-weight: 800; letter-spacing: -.035em; text-transform: uppercase; color: #263923; }
-.section-title span { color: #6A9156; }
+section[id],
+div[id="education"] {
+  scroll-margin-top: 90px;
+}
 
-.skip-link { position: fixed; z-index: 100; top: -100px; left: 12px; background: #263923; color: #fff; padding: 12px 18px; border-radius: 12px; }
-.skip-link:focus { top: 12px; }
+::selection {
+  background: #C4DCB5;
+  color: #263923;
+}
 
-/* Декоративные органические фигуры из Figma в адаптивной CSS-форме. */
-.decorations { position: absolute; z-index: -1; inset: 0; overflow: hidden; pointer-events: none; }
-.decor-blob { position: absolute; display: block; background: #DAE8D0; opacity: .68; }
-.decor-curve { position: absolute; width: 310px; height: 620px; opacity: .65; }
+.site-container {
+  width: min(100% - 48px, 1240px);
+  margin-inline: auto;
+}
 
-.decorations--hero .decor-blob--a { left: -170px; top: 110px; width: 600px; height: 640px; border-radius: 44% 56% 42% 58% / 47% 43% 57% 53%; transform: rotate(-22deg); }
-.decorations--hero .decor-blob--b { right: -240px; top: -100px; width: 480px; height: 460px; border-radius: 54% 46% 42% 58% / 38% 56% 44% 62%; transform: rotate(20deg); }
-.decorations--hero .decor-curve { right: -65px; top: 0; transform: rotate(-3deg); }
+.section-shell {
+  isolation: isolate;
+}
 
-.decorations--about .decor-blob--a { right: -170px; bottom: -120px; width: 720px; height: 700px; border-radius: 53% 47% 45% 55% / 61% 42% 58% 39%; transform: rotate(14deg); }
-.decorations--about .decor-blob--b { left: -180px; bottom: -280px; width: 360px; height: 550px; border-radius: 45% 55% 49% 51%; opacity: .4; }
-.decorations--about .decor-curve { right: -120px; top: 80px; }
+.section-kicker {
+  color: #526E48;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
 
-.decorations--format .decor-blob--a { right: -240px; top: 420px; width: 570px; height: 1050px; border-radius: 50% 50% 38% 62%; opacity: .65; transform: rotate(-13deg); }
-.decorations--format .decor-blob--b { left: -230px; bottom: -90px; width: 490px; height: 740px; border-radius: 50% 50% 40% 60%; opacity: .55; }
-.decorations--format .decor-curve { display: none; }
+.section-title {
+  font-size: clamp(2.1rem, 3.8vw, 3.8rem);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+  color: #263923;
+}
 
-.decorations--pricing .decor-blob--a { right: -120px; bottom: -260px; width: 630px; height: 850px; border-radius: 50% 50% 44% 56%; opacity: .65; transform: rotate(-15deg); }
-.decorations--pricing .decor-blob--b { left: -240px; top: -80px; width: 500px; height: 680px; border-radius: 52% 48% 46% 54%; opacity: .55; }
-.decorations--pricing .decor-curve { display: none; }
+.section-title span {
+  color: #6A9156;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: -100px;
+  left: 12px;
+  background: #263923;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 12px;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* фон */
+.decorations {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.decor-blob {
+  position: absolute;
+  display: block;
+  background: #DAE8D0;
+  opacity: .68;
+}
+
+/*.decorations--about .decor-blob--a {
+  right: -170px;
+  bottom: -120px;
+  width: 720px;
+  height: 700px;
+  border-radius: 53% 47% 45% 55% / 61% 42% 58% 39%;
+  transform: rotate(14deg);
+}
+
+.decorations--about .decor-blob--b {
+  left: -180px;
+  bottom: -280px;
+  width: 360px;
+  height: 550px;
+  border-radius: 45% 55% 49% 51%;
+  opacity: .4;
+}
+
+
+.decorations--hero .decor-blob--a {
+  left: -170px;
+  top: 110px;
+  width: 600px;
+  height: 640px;
+  border-radius: 44% 56% 42% 58% / 47% 43% 57% 53%;
+  transform: rotate(-22deg);
+}
+
+.decorations--hero .decor-blob--b {
+  right: -240px;
+  top: -100px;
+  width: 480px;
+  height: 460px;
+  border-radius: 54% 46% 42% 58% / 38% 56% 44% 62%;
+  transform: rotate(20deg);
+}
+*/
+
+/* Декоративные фигуры за портретами */
+
+.portrait-blobs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.portrait-blob {
+  position: absolute;
+  background: #C4DCB5;
+  opacity: 0.48;
+  border-radius: 9999px;
+}
+
+.portrait-blob--one {
+  width: 78%;
+  height: 75%;
+  top: 5%;
+  left: 6%;
+  transform: rotate(-8deg);
+}
+
+.portrait-blob--two {
+  width: 84%;
+  height: 72%;
+  bottom: 5%;
+  right: 4%;
+  border-radius: 65% 35% 48% 52% / 44% 58% 42% 56%;
+  transform: rotate(8deg);
+}
+
+.decorations--format .decor-blob--a {
+  right: -240px;
+  top: 420px;
+  width: 570px;
+  height: 1050px;
+  border-radius: 50% 50% 38% 62%;
+  opacity: .65;
+  transform: rotate(-13deg);
+}
+
+.decorations--format .decor-blob--b {
+  left: -230px;
+  bottom: -50px;
+  width: 490px;
+  height: 740px;
+  border-radius: 50% 50% 40% 60%;
+  opacity: .55;
+}
+
+.decorations--pricing .decor-blob--a {
+  right: -120px;
+  bottom: -260px;
+  width: 630px;
+  height: 850px;
+  border-radius: 50% 50% 44% 56%;
+  opacity: .65;
+  transform: rotate(-15deg);
+}
+
+.decorations--pricing .decor-blob--b {
+  left: -240px;
+  top: -80px;
+  width: 500px;
+  height: 680px;
+  border-radius: 52% 48% 46% 54%;
+  opacity: .55;
+}
+
 
 @media (max-width: 1023px) {
-  .hero-section { min-height: 0; }
-  .decorations--hero .decor-blob--a { top: 190px; left: -200px; width: 500px; height: 500px; }
+  .hero-section {
+    min-height: 0;
+  }
+
+  .decorations--hero .decor-blob--a {
+    top: 190px;
+    left: -200px;
+    width: 500px;
+    height: 500px;
+  }
 }
+
 @media (max-width: 639px) {
-  .site-container { width: min(100% - 36px, 1240px); }
-  .section-title { font-size: clamp(2rem, 9vw, 2.5rem); }
-  .decorations--hero .decor-blob--b { right: -260px; }
-  .decor-curve { opacity: .3; }
+  .site-container {
+    width: min(100% - 36px, 1240px);
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 9vw, 2.5rem);
+  }
+
+  .decorations--hero .decor-blob--b {
+    right: -260px;
+  }
+
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0s !important; animation-duration: .01ms !important; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    animation-duration: .01ms !important;
+  }
+}
+
+/* HERO — адаптивный портрет */
+
+.hero-portrait-frame {
+  --hero-photo-width: clamp(220px, 48vw, 365px);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+  max-width: calc(var(--hero-photo-width) + 48px);
+  height: calc(var(--hero-photo-width) * 1.24);
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.hero-portrait-image {
+  display: block;
+  width: min(100%, var(--hero-photo-width));
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Десктопная версия */
+
+@media (min-width: 1024px) {
+  .hero-portrait-frame {
+    --hero-photo-width: min(36vw, 460px);
+
+    max-width: none;
+    height: auto;
+
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-self: stretch;
+
+    margin-inline: 0;
+    overflow: visible;
+  }
+}
+
+/* Hero: портрет слева, заголовок справа */
+@media (min-width: 360px) and (max-width: 1023px) {
+
+  /* Контейнер фотографии */
+  .hero-portrait-frame {
+    --hero-photo-width: min(calc(100% + clamp(20px, 6vw, 34px)),
+        400px);
+
+    width: 100%;
+    max-width: none;
+    height: clamp(280px, 75vw, 690px);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self: end;
+
+    margin: 0;
+    overflow: visible;
+  }
+
+  /* Сама фотография */
+  .hero-portrait-frame .hero-portrait-image {
+    width: var(--hero-photo-width);
+    max-width: none;
+    height: auto;
+
+    flex-shrink: 0;
+    object-fit: contain;
+    object-position: bottom;
+  }
+
+  /* Blobs остаются позади фотографии */
+  .hero-portrait-frame .portrait-blobs {
+    left: calc(0px - clamp(20px, 6vw, 34px));
+    right: 0;
+  }
+
+  /* Заголовок подстраивается под ширину колонки */
+  /* Правая колонка Hero */
+  .hero-title-box {
+    container-type: inline-size;
+    align-self: start;
+    padding-top: 12px;
+    width: 100%;
+  }
+
+  /* Плашка "Нутрициолог · онлайн" */
+  .hero-title-box .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: max-content;
+    max-width: 100%;
+    min-height: 30px;
+
+    padding: 6px 10px;
+
+    font-size: clamp(9px, 2.8vw, 13px);
+    line-height: 1;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+  }
+
+  /* Большой заголовок */
+  .hero-responsive-title {
+    width: 100%;
+    margin-top: 12px;
+
+    font-size: clamp(16px, 10.7cqw, 42px);
+    line-height: 1.07;
+    letter-spacing: -0.05em;
+
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+}
