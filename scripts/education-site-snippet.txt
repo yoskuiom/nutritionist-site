@@ -1,0 +1,105 @@
+/** Документы об образовании из предоставленного HTML-перечня. */
+export type EducationCertificate = {
+  date: string;
+  title: string;
+  imageUrl: string;
+};
+
+/** Новые документы добавляй в этот массив. Список выводится по годам. */
+export const educationCertificates: EducationCertificate[] = [
+  {
+    date: "2026-02-13",
+    title: "PRO-ЖКТ. Уровень PROFI",
+    imageUrl: "https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/791d272c4633a53ec266c3a1822904ed.png/s/800x/a/61213/sc/44",
+  },
+  {
+    date: "2025-08-25",
+    title: "Женское здоровье",
+    imageUrl: "https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/34181a9d253d907e2d1ff921fc9f1e42.png/s/800x/a/61213/sc/149",
+  },
+  {
+    date: "2025-08-07",
+    title: "7 нутриентов, которые выключают тревожную голову",
+    imageUrl: "https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/0d5d151a91d0736f01f26efce79a3ba1.png/s/800x/a/61213/sc/227",
+  },
+  {
+    date: "2025-08-07",
+    title: "Формула здорового детокса",
+    imageUrl: "https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/4741eaec1448e4dcb8229e06043066fe.png/s/800x/a/61213/sc/143",
+  },
+  {
+    date: "2025-04-24",
+    title: "Железодефицит — о чём может говорить ОАК?",
+    imageUrl: "https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/73c271572fd0f3cc37080189ae360af1.png/s/800x/a/61213/sc/89",
+  },
+  {
+    date: "2025-04-03",
+    title: "Формула здорового пищеварения",
+    imageUrl: "https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/ea34df12216ce57f7004a59b0b075f9b.png/s/800x/a/61213/sc/184",
+  },
+  {
+    date: "2025-03-27",
+    title: "Через питание к здоровью",
+    imageUrl: "https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/c3ecffece61f52aaff0d592f2cd56b98.png/s/800x/a/61213/sc/490",
+  },
+  {
+    date: "2025-03-20",
+    title: "Расцветай",
+    imageUrl: "https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/7aee092cbce20be27da645666653e1f7.png/s/800x/a/61213/sc/243",
+  },
+  {
+    date: "2025-03-18",
+    title: "Beauty кафедра. Anti-Age",
+    imageUrl: "https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/d74610596b99d05e1fc23fb79a6555d2.png/s/800x/a/61213/sc/111",
+  },
+  {
+    date: "2025-03-16",
+    title: "Иммунная система и аутоиммунитет",
+    imageUrl: "https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/3584632c43f46fb9c88677d8acd76dd2.png/s/800x/a/61213/sc/172",
+  },
+  {
+    date: "2025-03-11",
+    title: "Нутрицевтическая поддержка организма",
+    imageUrl: "https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/3378404e8cd1e1cf67d64a80a9c3c97c.png/s/800x/a/61213/sc/203",
+  },
+  {
+    date: "2025-01-08",
+    title: "Лабораторные исследования и функциональная диагностика",
+    imageUrl: "https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/2b833751345d1f7987bc0e493afbd132.png/s/800x/a/61213/sc/98",
+  },
+  {
+    date: "2024-11-02",
+    title: "Превентивный нутрициолог",
+    imageUrl: "https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/507a3f2717230bf2d039e80500a98e11.png/s/800x/a/61213/sc/497",
+  },
+  {
+    date: "2024-10-31",
+    title: "Персонализация питания",
+    imageUrl: "https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/ebd509401a2d710e3a0b45fd15050c75.png/s/800x/a/61213/sc/117",
+  },
+  {
+    date: "2024-10-16",
+    title: "Система пищеварения. Заболевания ЖКТ",
+    imageUrl: "https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/9ded25ef6497e843b20768434ce95909.png/s/800x/a/61213/sc/82",
+  },
+  {
+    date: "2024-09-13",
+    title: "Основы здоровья. Модификация образа жизни",
+    imageUrl: "https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/b1ede577ac5148375dc13e6ace31daea.png/s/800x/a/61213/sc/375",
+  },
+  {
+    date: "2024-08-04",
+    title: "Формула здоровья — завершение программы",
+    imageUrl: "https://fs-thb01.getcourse.ru/fileservice/file/thumbnail/h/e54513060a2df58162d6dca614f235e8.png/s/800x/a/61213/sc/90",
+  },
+  {
+    date: "2024-07-29",
+    title: "Формула здоровья — справка об обучении",
+    imageUrl: "https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/c30b420529c294f1291ec802a2ef9302.png/s/800x/a/61213/sc/33",
+  },
+  {
+    date: "2024-06-08",
+    title: "Формула здоровья — онлайн-интенсив",
+    imageUrl: "https://fs-thb03.getcourse.ru/fileservice/file/thumbnail/h/6ebd20528b3c18bc7aded5cde48e9469.png/s/800x/a/61213/sc/347",
+  },
+];

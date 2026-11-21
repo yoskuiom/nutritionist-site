@@ -27,7 +27,7 @@ export default function Work() {
               </div>
               <div className="rounded-[28px] border border-olive/35 bg-cream/90 px-5 py-5 sm:px-8 sm:py-6">
                 <h3 className="text-lg font-extrabold text-forest sm:text-xl">{step.title}</h3>
-                <p className="mt-1 max-w-[930px] text-sm leading-relaxed text-forest/85 sm:text-base">{step.description}</p>
+                <p className="mt-1 whitespace-pre-wrap max-w-[930px] text-sm leading-relaxed text-forest/85 sm:text-base">{step.description}</p>
               </div>
             </li>
           ))}

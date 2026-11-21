@@ -1,10 +1,10 @@
 import type { ReactNode } from 'react';
-import { site } from '@/data/site';
 
 type Props = {
   children?: ReactNode;
   className?: string;
   variant?: 'primary' | 'soft' | 'outline';
+  href?: string;
   onClick?: () => void;
 };
 
@@ -12,9 +12,9 @@ export default function BookingLink({
   children = 'Записаться',
   className = '',
   variant = 'primary',
+  href = '#booking',
   onClick,
 }: Props) {
-  const href = site.bookingUrl || '#booking';
   const external = /^https?:\/\//.test(href);
   const styles = {
     primary: 'bg-forest text-white hover:bg-[#38512F]',

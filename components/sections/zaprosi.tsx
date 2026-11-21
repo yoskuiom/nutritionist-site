@@ -10,7 +10,7 @@ export default function Hero() {
       aria-labelledby="requests-title"
       className="section-shell relative isolate overflow-hidden bg-cream"
     >
-      <div className="site-container relative z-10 pt-10 pb-12 md:pt-14 md:pb-16">
+      <div className="site-container relative z-10 pt-0 pb-12 md:pt-5 md:pb-16">
 
         {/* Заголовок раздела */}
         <div

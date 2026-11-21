@@ -1,15 +1,14 @@
 import Image from 'next/image';
 import { principles, copy } from '@/data/site';
+import EducationCertificates from '@/components/sections/EducationCertificates';
 
 export default function About() {
   return (
     <section id="top" aria-labelledby="about-title" className="section-shell relative isolate overflow-hidden bg-cream">
       <div className="site-container relative z-10 grid items-start
-      gap-y-6 pt-7 pb-10
+      gap-y-6 pt-7 pb-12
       md:pt-14 md:pb-12
-      lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)]
-      lg:gap-x-6 lg:gap-y-6
-      lg:pt-10 lg:pb-14">
+      lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-start">
 
         <div className="text-center lg:col-span-2">
           <h1
@@ -44,9 +43,13 @@ export default function About() {
           <p className="mt-6 max-w-[690px] text-lg leading-relaxed text-forest/90">
             {copy.about.lead}
           </p>
-          <blockquote className="mt-7 max-w-[690px] border-l-[3px] border-olive pl-5 text-base leading-[1.85] text-ink/85 sm:text-lg">
-            {copy.about.quote}
+          <blockquote className="mt-7 max-w-[690px] border-t-[1px] border-olive text-base leading-[1.85] text-ink/85 sm:text-lg">
+            {copy.about.quoteOne}
           </blockquote>
+          <blockquote className="mt-7 max-w-[690px] text-base leading-[1.85] text-ink/85 sm:text-lg">
+            {copy.about.quoteTwo}
+          </blockquote>
+
 
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {principles.map((item) => (
@@ -63,22 +66,15 @@ export default function About() {
               <div className="flex-1">
                 <h3 className="text-lg font-bold text-forest">{copy.about.qualificationTitle}</h3>
                 <p className="mt-1 text-sm leading-relaxed text-forest/75">{copy.about.qualificationSummary}</p>
-                <details className="education-details mt-3">
-                  <summary className="cursor-pointer text-sm font-semibold text-forest underline decoration-olive/50 underline-offset-4 hover:text-olive">
-                    Подробнее об образовании →
-                  </summary>
-                  <p className="mt-3 text-sm leading-relaxed text-forest/75">
-                    чето будет
-                  </p>
-                </details>
+                <EducationCertificates />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="relative isolate mx-auto min-h-[410px] w-full max-w-[520px] self-end sm:min-h-[540px] lg:min-h-[650px]">
+        <div className="relative isolate mx-auto min-h-[410px] w-full max-w-[520px] lg:self-start lg:mx-auto sm:min-h-[540px] lg:min-h-[650px]">
 
-          <div className="relative isolate mx-auto flex w-full max-w-[520px] items-end self-end lg:min-h-[650px]">
+          <div className="about-photo-column relative isolate mx-auto w-full max-w-[520px] lg:mx-0 lg:max-w-none lg:self-start lg:justify-self-center">
 
             {/* Контейнер фотографии и blobs */}
             <div className="relative w-full">

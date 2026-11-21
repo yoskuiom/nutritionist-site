@@ -9,6 +9,7 @@ const links = [
   { href: '#zaprosi', label: 'Запросы' },
   { href: '#format', label: 'Формат' },
   { href: '#pricing', label: 'Тарифы' },
+  { href: '#booking', label: 'Оплата' },
 ];
 
 export default function Header() {
@@ -67,7 +68,7 @@ export default function Header() {
           <nav
             id="mobile-menu"
             aria-label="Мобильная навигация"
-            className="border-t border-olive/15 bg-cream px-6 pb-6 pt-3"
+            className="absolute inset-x-0 top-full z-50 border-t border-olive/15 bg-cream px-6 pb-6 pt-3"
           >
             <div className="mx-auto flex max-w-xl flex-col gap-1">
               {links.map((link) => (

@@ -22,6 +22,7 @@ export default function Pricing() {
               <h3 className="min-h-[58px] text-2xl leading-tight font-extrabold text-olive">{tariff.name}</h3>
               {tariff.duration && <p className="mt-2 text-lg font-bold text-forest">{tariff.duration}</p>}
               <p className="mt-5 text-sm leading-relaxed text-forest/80 sm:text-base">{tariff.description}</p>
+
               <div className="mt-7 border-t border-olive/20 pt-6">
                 <h4 className="mb-4 text-base font-bold text-forest">Что входит</h4>
                 <ul className="space-y-3">
@@ -32,11 +33,20 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
+                {/* Стоимость тарифа */}
+                <div className="mt-6 text-center">
+                  <p
+                    className="whitespace-nowrap text-[32px] leading-none font-extrabold tracking-[-0.035em] text-forest tabular-nums sm:text-[38px]"
+                  >
+                    {formatRubles(tariff.priceRub)}
+                  </p>
+                  <p className="mt-6 text-center text-sm leading-relaxed text-forest/65">{tariff.cta}</p>
+                </div>
               </div>
             </article>
           ))}
         </div>
-        <p className="mt-6 text-center text-sm leading-relaxed text-forest/65">Подробные условия, объём сопровождения и порядок оплаты уточняются до записи.</p>
+        <p className="mt-6 text-center text-sm leading-relaxed text-forest/65"></p>
       </div>
     </section>
   );

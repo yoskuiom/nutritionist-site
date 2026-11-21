@@ -253,7 +253,8 @@ div[id="education"] {
   }
 }
 
-/* HERO — адаптивный портрет */
+/*
+/* HERO — адаптивный портрет 
 
 .hero-portrait-frame {
   --hero-photo-width: clamp(220px, 48vw, 365px);
@@ -277,7 +278,7 @@ div[id="education"] {
   flex-shrink: 0;
 }
 
-/* Десктопная версия */
+/* Десктопная версия 
 
 @media (min-width: 1024px) {
   .hero-portrait-frame {
@@ -295,10 +296,10 @@ div[id="education"] {
   }
 }
 
-/* Hero: портрет слева, заголовок справа */
+/* Hero: портрет слева, заголовок справа 
 @media (min-width: 360px) and (max-width: 1023px) {
 
-  /* Контейнер фотографии */
+  /* Контейнер фотографии 
   .hero-portrait-frame {
     --hero-photo-width: min(calc(100% + clamp(20px, 6vw, 34px)),
         400px);
@@ -316,7 +317,7 @@ div[id="education"] {
     overflow: visible;
   }
 
-  /* Сама фотография */
+  /* Сама фотография 
   .hero-portrait-frame .hero-portrait-image {
     width: var(--hero-photo-width);
     max-width: none;
@@ -327,14 +328,14 @@ div[id="education"] {
     object-position: bottom;
   }
 
-  /* Blobs остаются позади фотографии */
+  /* Blobs остаются позади фотографии 
   .hero-portrait-frame .portrait-blobs {
     left: calc(0px - clamp(20px, 6vw, 34px));
     right: 0;
   }
 
   /* Заголовок подстраивается под ширину колонки */
-  /* Правая колонка Hero */
+  /* Правая колонка Hero 
   .hero-title-box {
     container-type: inline-size;
     align-self: start;
@@ -342,7 +343,7 @@ div[id="education"] {
     width: 100%;
   }
 
-  /* Плашка "Нутрициолог · онлайн" */
+  /* Плашка "Нутрициолог · онлайн" 
   .hero-title-box .eyebrow {
     display: inline-flex;
     align-items: center;
@@ -361,7 +362,7 @@ div[id="education"] {
     white-space: nowrap;
   }
 
-  /* Большой заголовок */
+  /* Большой заголовок 
   .hero-responsive-title {
     width: 100%;
     margin-top: 12px;
@@ -374,4 +375,5 @@ div[id="education"] {
     word-break: normal;
     hyphens: none;
   }
-}
+}*/
+
