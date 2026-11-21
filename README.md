@@ -4,7 +4,7 @@
 1. клонировать репозиторий
 
 ```bash
-git clone https://github.com/yoskuiom/web-sp202.git
+git clone [https://github.com/yoskuiom/web-sp202.git
 ```
 2. перейти в папку проекта
 
