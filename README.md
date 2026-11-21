@@ -11,11 +11,7 @@ git clone https://github.com/yoskuiom/nutritionist-site.git
 ```bash
 cd rohanskaya-website
 ```
-3. установка
 
-```bash
-npm install
-```
 4. запуск
 
 ```bash
