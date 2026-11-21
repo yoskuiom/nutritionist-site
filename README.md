@@ -9,7 +9,7 @@ git clone https://github.com/yoskuiom/web-sp202.git
 2. перейти в папку проекта
 
 ```bash
-cd web-sp202
+cd rohanskaya-website
 ```
 3. установка
 
