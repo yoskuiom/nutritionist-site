@@ -1,12 +1,8 @@
-/**
- * Контент страницы. До подключения Sanity меняйте тексты, цены и ссылки здесь.
- * Компоненты получают данные из этих массивов и не хранят тексты внутри разметки.
- */
-
 export type Symptom = { label: string };
 export type Principle = { title: string; icon: string };
 export type Step = { title: string; description: string };
 export type FocusArea = { title: string; description: string; icon: string };
+
 export type Tariff = {
   id: string;
   name: string;
@@ -27,14 +23,12 @@ export const site = {
   socialUrl: 'https://www.instagram.com/rohanskaya.ev/',
 } as const;
 
-/** Заголовки и основные тексты тоже вынесены сюда: позже их сможет менять клиентка через CMS. */
+/** Titles and main content */
 export const copy = {
 
   about: {
-    headingOne: 'Меня зовут Роханская Евгения,',
-    headingTwo: 'я —',
-    headingAccent: 'дипломированный нутрициолог-консультант',
-    headingThree: 'по питанию и образу жизни',
+    headingOne: 'Меня зовут ',
+    headingAccent: 'Роханская Евгения',
     lead: 'Системная работа над здоровьем с персональной стратегией и поддержкой во внедрении рекомендаций.',
     quoteOne: 'Помогаю разобраться в вашей ситуации, определить приоритеты и выстроить понятный план действий. Не готовые универсальные схемы, а работа с вашей ситуацией.',
     quoteTwo: 'Моя задача — не дать очередной список запретов, а помочь разобраться в питании и постепенно сформировать устойчивые привычки.',

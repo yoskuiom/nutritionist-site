@@ -40,7 +40,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="inline-flex size-11 items-center justify-center rounded-full border border-olive/40 text-forest md:hidden transition-colors hover:text-olive cursor-pointer"
+          className="inline-flex size-11 items-center justify-center text-forest md:hidden transition-colors hover:text-olive cursor-pointer"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
           aria-label={menuOpen ? 'Закрыть меню' : 'Открыть меню'}

@@ -13,7 +13,7 @@ export default function About() {
         <div className="text-center lg:col-span-2">
           <h1
             id="about-title"
-            className="mx-auto max-w-[1000px]
+            className="section-title mx-auto max-w-[1000px]
         text-[clamp(2rem,3.5vw,3.5rem)]
         leading-[1.1] font-extrabold
         tracking-[-0.035em] uppercase text-forest"
